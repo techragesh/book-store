@@ -1,0 +1,18 @@
+.description-text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.no-books-text {
+  margin-top: 10px;
+}
+
+.card-deck {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.card-size {
+  width: 18rem;
+}
