@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { CardDeck, Card, Button } from "react-bootstrap";
 import BookDetail from "./BookDetail";
+import "./Book.css";
 
 /**
  * Book Component
@@ -10,7 +11,7 @@ import BookDetail from "./BookDetail";
  * @param {*} props holds info of the book
  * @returns Book info
  */
-const Book = props => {
+const Book = (props) => {
   const [modalShow, setModalShow] = useState(false);
   const { title, author, summary, image } = props.book;
 
@@ -24,7 +25,7 @@ const Book = props => {
           </Card.Title>
           <Card.Text className="description-text">{summary}</Card.Text>
           <Button variant="primary" onClick={() => setModalShow(true)}>
-            Detail View
+            Details
           </Button>
           <BookDetail
             show={modalShow}

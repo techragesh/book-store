@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Form, Button, Alert } from "react-bootstrap";
+import "./Login.css";
 
 /**
  * Login Component
@@ -9,7 +10,7 @@ import { Form, Button, Alert } from "react-bootstrap";
  * @param {*} props holds email, password
  * @returns it returns book store page when successful
  */
-const LoginForm = props => {
+const LoginForm = (props) => {
   //Holds email and password in details
   const [details, setDetails] = useState({ email: "", password: "" });
 
@@ -25,7 +26,7 @@ const LoginForm = props => {
    * Submitting the login event and send the user info to parent
    * @param {*} event
    */
-  const handleSubmit = event => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     props.login(details);
   };
@@ -44,7 +45,7 @@ const LoginForm = props => {
             autoFocus
             type="email"
             value={details.email}
-            onChange={e => setDetails({ ...details, email: e.target.value })}
+            onChange={(e) => setDetails({ ...details, email: e.target.value })}
           />
         </Form.Group>
         <Form.Group size="lg" controlId="password">
@@ -52,7 +53,9 @@ const LoginForm = props => {
           <Form.Control
             type="password"
             value={details.password}
-            onChange={e => setDetails({ ...details, password: e.target.value })}
+            onChange={(e) =>
+              setDetails({ ...details, password: e.target.value })
+            }
           />
         </Form.Group>
         <Button

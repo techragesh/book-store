@@ -1,6 +1,7 @@
 import React from "react";
 import Book from "./Book";
 import { Row, Col, Alert } from "react-bootstrap";
+import "./Book.css";
 
 /**
  * BookList Component
@@ -10,9 +11,9 @@ import { Row, Col, Alert } from "react-bootstrap";
  * @param {*} props holds books list
  * @returns Book info
  */
-const BookList = props => {
+const BookList = (props) => {
   /** iterate book list */
-  const renderBookList = props.books.map(book => {
+  const renderBookList = props.books.map((book) => {
     return (
       <Col xs={6} md={4}>
         <Book book={book} key={book.id}></Book>
